@@ -20,7 +20,7 @@ app.use('/student',studentRoutes);
 
 // POST ROUTE to add person
 
-// app.post('/person',async(req,res)=>{
+// app.post('/person',async(req,res)=>{          
 //     try{
 //         const data=req.body;
 //         const newPerson =new Person(data);
