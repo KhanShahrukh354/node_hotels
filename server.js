@@ -5,7 +5,6 @@ const db=require('./db');
 const bodyParser=require('body-parser');
 app.use(bodyParser.json());
 
-
 app.get('/',function(req,res){
     res.send("Hii my name is shahrukh Saifi")
 })
@@ -13,11 +12,11 @@ app.get('/',function(req,res){
 const personRoutes=require('./routes/personRoutes');
 const menuItemRoutes=require('./routes/menuItemRoutes');
 const studentRoutes=require('./routes/studentRoutes');
-
+                                                        
 app.use('/person', personRoutes);
 app.use('/menu',menuItemRoutes);
 app.use('/student',studentRoutes);
-
+    1
 // POST ROUTE to add person
 
 // app.post('/person',async(req,res)=>{          
@@ -100,6 +99,9 @@ app.use('/student',studentRoutes);
 //         res.send(json)
 // }) 
 // //app.get()
-app.listen(3000,()=>{
+
+const PORT=process.env.PORT || 3000;
+
+app.listen(PORT,()=>{
     console.log('server is listening on port 3000');
 })
